@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>贪吃蛇</title>
+	<style>
+		html{
+			margin:0;
+			padding:0;
+			font-size: 16px;
+		}
+		.container{
+			display:flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="pannel">
+			
+		</div>
+		<div class="selector">
+			<span>游戏规格：</span>
+			<select name="size" id="size">
+				<option value="10">10*10</option>
+				<option value="20">20*20</option>
+				<option value="30">30*30</option>
+			</select>
+			<span>游戏速度：</span>
+			<select name="speed" id="speed">
+				<option value="慢速">慢速</option>
+				<option value="一般">一般</option>
+				<option value="快速">快速</option>
+			</select>
+			<button>开始游戏</button>
+		</div>
+
+	</div>
+	<script>
+		document.getElementById("size").addEventListener("change",function(){
+
+		})
+		var setting = {
+			panelSize:10,
+			speed:500
+		}
+		function changePannelSize(size){
+			var content=[];
+			content.push("<table>");
+			for(let i=0;i<size;i++){
+				content.push("<tr>");
+				for(let j=0;j<size;j++){
+					content.push("<td></td>");
+				}
+				content.push("</tr>");
+			}
+			content.push("</table>");
+			
+		}
+	</script>
+</body>
+</html>
